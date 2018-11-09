@@ -13,4 +13,36 @@
 <script src='api/api.js'></script>
 <script src='modules/modules.js'></script>
 
+<h1> Welcome to let's meet, where arranging a meeting have never been easier </h1> <br />
+<h2> Please enter the names and locations and what is the best time for each participant</h2> <br />
+
+<form >
+    Name:
+    <input type="text" name="firstname" id="user1Name" placeholder ="1st person Name" >
+    Latitude:
+    <input type="text" name="lastname" id="user1Latitude" placeholder ="1st person Latitude" >
+    Longitude:
+    <input type="text" name="lastname" id="user1Longitude" placeholder ="1st person Longitude">
+    Best Time To Meet:
+    <input type="text" name="lastname" id="user1BestTime" placeholder ="1st person Best Time">
+    <br/>
+    Name:
+    <input type="text" name="firstname" id="user2Name" placeholder ="2nd person Name" >
+    Latitude:
+    <input type="text" name="lastname" id="user2Latitude" placeholder ="2nd person Latitude" >
+    Longitude:
+    <input type="text" name="lastname" id="user2Longitude" placeholder ="2nd person Longitude">
+    Best Time To Meet:
+    <input type="text" name="lastname" id="user2BestTime" placeholder ="2nd person Best Time">
+    <br/>
+    <input type="submit" value="Submit" onclick="submitForm()">
+  </form>
+
+<script>
+
+function submitForm(){
+    alert(document.getElementById("user1Name").value);
+};
+
+</script>
 </html>
