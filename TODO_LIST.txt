@@ -1,0 +1,8 @@
+1) Create GitHub Porj. (Done)
+2) Create a webpage that has textboxes to input current location and best time to meet.
+3) after the user click submit then it takes the user to another page where it shows the best location & time to meet.
+4) let's write the data that the user inputs so we can say that we are using little db and nodejs.
+5) data sturcture should look like this :
+	{Name: "Omar", Latitude: "111", Long: "222", preferredTime: "15:00"}
+6) we could probably come up with an argument saying that we are going to use this data for ML stuff and might give us the chance to exapnd.
+
