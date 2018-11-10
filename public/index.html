@@ -43,14 +43,17 @@ var  usersdata = [];
 
 <script>
 
+
+
 function saveData(){
 user1 = {"name":document.getElementById("user1Name").value,"lat":document.getElementById("user1Latitude").value,"long":document.getElementById("user1Longitude").value,"BT":document.getElementById("user1BestTime").value}
 usersdata.push(user1);
 user2 = {"name":document.getElementById("user2Name").value,"lat":document.getElementById("user2Latitude").value,"long":document.getElementById("user2Longitude").value,"BT":document.getElementById("user2BestTime").value}
 usersdata.push(user2);
+goToResults()
 }
 
-function submitForm(){
+function goToResults(){
 
 document.location.href="result.html"
 };
