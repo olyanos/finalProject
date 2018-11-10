@@ -16,7 +16,7 @@
 <h1> Welcome to let's meet, where arranging a meeting have never been easier </h1> <br />
 <h2> Please enter the names and locations and what is the best time for each participant</h2> <br />
 
-<form >
+<form  action="javascript:submitForm()">
     Name:
     <input type="text" name="firstname" id="user1Name" placeholder ="1st person Name" >
     Latitude:
@@ -35,38 +35,20 @@
     Best Time To Meet:
     <input type="text" name="lastname" id="user2BestTime" placeholder ="2nd person Best Time">
     <br/>
-    <input type="submit" value="Submit" onclick="submitForm()">
+    <input type="submit" value="Submit">
   </form>
-
-  <style>
-        #map { width: 100%; height: 400px; background-color: grey; }
-</style>
-    <div id="map"></div>
 
 <script>
 
 function submitForm(){
 
-
+document.location.href="result.html"
 };
 
 
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-
 </script>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiYrja2-ZjF2JEpiI_W16ODrGBBsHijOs&callback=initMap">
-</script>
+
 
 
 </html>
