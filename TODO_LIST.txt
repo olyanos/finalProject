@@ -6,3 +6,10 @@
 	{Name: "Omar", Latitude: "111", Long: "222", preferredTime: "15:00"}
 6) we could probably come up with an argument saying that we are going to use this data for ML stuff and might give us the chance to exapnd.
 
+Idea:
+1) in the navigation tab there is create a group option where it takes usernames as inputs.
+2) each group has a name and members and each member has a current location.
+3) each member has 3 fav resturants.
+4) in each group you come up with an alogrithm that gives each resturant a wieghted score.
+5) find the central location.
+6) search for resturant1 in that area if it is not there go to resturant2 ...etc. 
