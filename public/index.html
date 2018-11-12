@@ -12,56 +12,36 @@
 
 <script src='api/api.js'></script>
 <script src='modules/modules.js'></script>
+<div class="card text-white bg-dark mb-3" style="max-width: 40rem;">
+        <div class="card-header"> MIT 1.125 Final Project</div>
+        <div class="card-body">
+          <h1 class="card-title">Welcome to let's meet </h1>
+          <p class="card-text"> where arranging a meeting have never been easier</p>
+        </div>
+</div>
+<button type="onclick" class="btn btn-primary" id="HomeButton" > Home</button>
+<button type="onclick" class="btn btn-info" id="CreateAccount" > Create Account</button>
+<button type="onclick" class="btn btn-secondary" id="letsMeet"> Let's meet</button>
+<button type="onclick" class="btn btn-success" id="AboutUs"> AboutUs</button>
 
-<h1> Welcome to let's meet, where arranging a meeting have never been easier </h1> <br />
-<h2> Please enter the names and locations and what is the best time for each participant</h2> <br />
-<script>
-var  usersdata = [];
 
+<script type="text/javascript">
+    document.getElementById("HomeButton").onclick = defaultModule;
+    document.getElementById("CreateAccount").onclick = loadCreateAccount;
+    document.getElementById("letsMeet").onclick = loadLetsMeet;
+    document.getElementById("AboutUs").onclick = loadAboutUs;
 </script>
-<form  action="javascript:saveData()">
-    Name:
-    <input type="text"  id="user1Name" placeholder ="1st person Name" >
-    Latitude:
-    <input type="text"  id="user1Latitude" placeholder ="1st person Latitude" >
-    Longitude:
-    <input type="text"  id="user1Longitude" placeholder ="1st person Longitude">
-    Best Time To Meet:
-    <input type="text"  id="user1BestTime" placeholder ="1st person Best Time">
-    <br/>
-    Name:
-    <input type="text" id="user2Name" placeholder ="2nd person Name" >
-    Latitude:
-    <input type="text" id="user2Latitude" placeholder ="2nd person Latitude" >
-    Longitude:
-    <input type="text" id="user2Longitude" placeholder ="2nd person Longitude">
-    Best Time To Meet:
-    <input type="text" id="user2BestTime" placeholder ="2nd person Best Time">
-    <br/>
-    <input type="submit" value="Submit">
-  </form>
 
-<script>
+<!-- <script type="text/javascript">
 
+    plotLocation = function(u1Lat,u1Long,u2Lat,u2Long,u3Lat,u3Long){
 
-
-function saveData(){
-user1 = {"name":document.getElementById("user1Name").value,"lat":document.getElementById("user1Latitude").value,"long":document.getElementById("user1Longitude").value,"BT":document.getElementById("user1BestTime").value}
-usersdata.push(user1);
-user2 = {"name":document.getElementById("user2Name").value,"lat":document.getElementById("user2Latitude").value,"long":document.getElementById("user2Longitude").value,"BT":document.getElementById("user2BestTime").value}
-usersdata.push(user2);
-goToResults()
+            console.log('well I got here');
 }
 
-function goToResults(){
-
-document.location.href="result.html"
-};
-
-
 </script>
 
-
+ -->
 
 
 </html>
