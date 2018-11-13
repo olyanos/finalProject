@@ -27,7 +27,6 @@ app.get('/account/create/:username/:res1/:res2/:res3/:res4/:res5/:userLat/:userL
     db.get('accounts').push(new_account).write();
 });
 
-
 app.get('/usersLoc/:firstUser/:secondUser/:thirdUser', function (req, res) {
     var firstuserNameData = db.get('accounts').find({username:req.params.firstUser}).value();
     var seconduserNameData = db.get('accounts').find({username:req.params.secondUser}).value();
@@ -40,7 +39,8 @@ app.get('/usersLoc/:firstUser/:secondUser/:thirdUser', function (req, res) {
     var u3Lat = thirduserNameData.userLat;
     var u3Long = thirduserNameData.userLong;
 
-    // plotLocation(u1Lat,u1Long,u2Lat,u2Long,u3Lat,u3Long);
+    var locations = {u1Lat,u1Long,u2Lat,u2Long,u3Lat,u3Long}
+    res.send(locations);
 });
 
 // start server

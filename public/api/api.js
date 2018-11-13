@@ -54,18 +54,12 @@ function submituserNames() {
             .end(function(err,res){
                 if(err){ console.log(err);}
                 else { console.log(res.text);}
-    
             })
 
+    window.location.href = "../result.html";
+
+
 
 
 }
-
-function deposit() {
-    // -------------------------------------
-    //  YOUR CODE
-    //  Deposit funds user funds on server
-    // -------------------------------------
-}
-
 
