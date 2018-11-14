@@ -55,11 +55,10 @@ function submituserNames() {
                 if(err){ console.log(err);}
                 else { console.log(res.text);}
             })
-
-    window.location.href = "../result.html";
-
-
-
+          var  avg_lat = 42.358130;
+          var  avg_long = -71.092436;
+            
+    window.location.href = "../result.html?avg_lat="+avg_lat+"&avg_long="+avg_long;
 
 }
 

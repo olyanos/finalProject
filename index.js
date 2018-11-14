@@ -41,6 +41,7 @@ app.get('/usersLoc/:firstUser/:secondUser/:thirdUser', function (req, res) {
 
     var locations = {u1Lat,u1Long,u2Lat,u2Long,u3Lat,u3Long}
     res.send(locations);
+
 });
 
 // start server
