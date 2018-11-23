@@ -62,8 +62,7 @@ return obj;
 }
     var avg_lat = getAllUrlParams().avg_lat;;
     var avg_long = getAllUrlParams().avg_long;
-    console.log(avg_lat);
-    console.log(avg_long);
+
 
   </script> 
 
@@ -90,8 +89,10 @@ return obj;
       var infowindow;
 
       function initMap() {
-        var pyrmont = {lat: 42.358130, lng: -71.092436};
-        //var pyrmont = {lat: u1Lat, lng: u1Long};
+        console.log(avg_lat);
+        console.log(avg_long);
+        //var pyrmont = {lat: 42.358130, lng: -71.092436};
+        var pyrmont = {lat: Number(avg_lat), lng: Number(avg_long)};
         map = new google.maps.Map(document.getElementById('map'), {
           center: pyrmont,
           zoom: 15

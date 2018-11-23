@@ -49,16 +49,26 @@ function submituserNames() {
         var temp24 = String(usersobj.thirdUser);
         var temp29 = temp20+temp21+temp22+temp21+temp23+temp21+temp24;
         var url = temp29;
-        superagent
+
+        
+         superagent
             .get(url)
             .end(function(err,res){
                 if(err){ console.log(err);}
-                else { console.log(res.text);}
+                else {
+                var result =  res.body;
+                var  avg_latq = res.body.avg_lat;
+                var  avg_longq = res.body.avg_long;
+                window.location.href = "../result.html?avg_lat="+avg_latq+"&avg_long="+avg_longq;
+
+            }
             })
-          var  avg_lat = 42.358130;
-          var  avg_long = -71.092436;
+
+
+
+
+
             
-    window.location.href = "../result.html?avg_lat="+avg_lat+"&avg_long="+avg_long;
 
 }
 
