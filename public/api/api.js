@@ -42,6 +42,10 @@ function submituserNames() {
         thirdUser:document.getElementById("3rd_userName").value,
         };
 
+        //There should be a function here returning prefrence
+
+        var preffered = 'subway';
+
         var temp20 = '/usersLoc';
         var temp21 = '/';
         var temp22 = String(usersobj.firstUser);
@@ -59,7 +63,7 @@ function submituserNames() {
                 var result =  res.body;
                 var  avg_latq = res.body.avg_lat;
                 var  avg_longq = res.body.avg_long;
-                window.location.href = "../result.html?avg_lat="+avg_latq+"&avg_long="+avg_longq;
+                window.location.href = "../result.html?avg_lat="+avg_latq+"&avg_long="+avg_longq+"&preffered="+preffered;
 
             }
             })

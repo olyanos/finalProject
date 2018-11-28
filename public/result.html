@@ -60,8 +60,9 @@ if (queryString) {
 
 return obj;
 }
-    var avg_lat = getAllUrlParams().avg_lat;;
+    var avg_lat = getAllUrlParams().avg_lat;
     var avg_long = getAllUrlParams().avg_long;
+    var preffered= getAllUrlParams().preffered;
 
 
   </script> 
@@ -91,6 +92,8 @@ return obj;
       function initMap() {
         console.log(avg_lat);
         console.log(avg_long);
+        console.log(preffered);
+
         //var pyrmont = {lat: 42.358130, lng: -71.092436};
         var pyrmont = {lat: Number(avg_lat), lng: Number(avg_long)};
         map = new google.maps.Map(document.getElementById('map'), {
@@ -98,13 +101,19 @@ return obj;
           zoom: 15
         });
 
+        var request = {
+      location: pyrmont,
+      radius: '500',
+      query: preffered
+      };
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
+        service.textSearch(request, callback);
+/*         service.nearbySearch({
           location: pyrmont,
           radius: 500,
-          type: ['restaurant']
-        }, callback);
+          //type: ['restaurant']
+        }, callback); */
       }
 
 
