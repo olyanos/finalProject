@@ -44,6 +44,14 @@ function submituserNames() {
 
         //There should be a function here returning prefrence
 
+
+
+
+
+
+        var preffered =
+
+
         var preffered = 'subway';
 
         var temp20 = '/usersLoc';
