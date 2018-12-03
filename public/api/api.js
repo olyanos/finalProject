@@ -52,7 +52,6 @@ function submituserNames() {
 
         //There should be a function here returning prefrence
 
-
         var temp20 = '/usersLoc';
         var temp21 = '/';
         var temp22 = String(usersobj.firstUser);
@@ -99,21 +98,59 @@ function submituserNames() {
                 var u3p3 = bulk_data.thirduserNameData.res3;
                 var u3p4 = bulk_data.thirduserNameData.res4;
                 var u3p5 = bulk_data.thirduserNameData.res5;
-                
-                // for Mason : write your function here using the varaibles above and store it in var preffered = 'subway';
-                
-                var preffered = 'subway';
+
+                //all preference data
+                var pref_data = [u1p1,u1p2,u1p3,u1p4,u1p5,u2p1,u2p2,u2p3,u2p4,u2p5,u3p1,u3p2,u3p3,u3p4,u3p5]
+                var scores = [5.1,4.1,3.1,2.1,1.1,5.2,4.2,3.2,2.2,1.2,5.3,4.3,3.3,2.3,1.3];
+
+                var preffered = function(){
+
+                    var repeat = function(req) {
+                        var counts = [];
+                        for(var i = 0; i <= req.length; i++) {
+                            if(counts[req[i]] == undefined) {
+                                counts[req[i]] = 1;
+                            }
+
+                            else {
+                                return true;
+                            }
+
+                        }
+                        return false;
+                    };
+
+                    if(repeat(pref_data)){
+                        var counted = [];
+                        var scores = [];
+                        for (var i = 0; i <= pref_data.length; i++) {
+                            if(counted[pref_data[i]] == undefined){
+                                counted[pref_data[i]] = scores[i]
+                            }
+
+                            else {
+                                counted[pref_data[i]] = counted[pref_data[i]] + scores[i];
+                            }
+                        }
+
+                        return counted[scores.indexOf(Math.max.apply(null, scores))];
+
+                    }
+
+                    else{
+                        var top = [u1p1, u2p1, u3p1];
+                        var rand = top[Math.floor(Math.random() * myArray.length)];
+                        return rand;
+                    }
+
+
+                }
 
                 window.location.href = "../result.html?avg_lat="+avg_lat+"&avg_long="+avg_long+"&preffered="+preffered;
 
             }
             })
 
-
-
-
-
-            
 
 }
 
