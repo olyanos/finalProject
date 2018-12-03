@@ -144,21 +144,13 @@ function submituserNames() {
                     }
 
 
-
-
                 }
-
 
                 window.location.href = "../result.html?avg_lat="+avg_lat+"&avg_long="+avg_long+"&preffered="+preffered;
 
             }
             })
 
-
-
-
-
-            
 
 }
 
