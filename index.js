@@ -32,17 +32,8 @@ app.get('/usersLoc/:firstUser/:secondUser/:thirdUser', function (req, res) {
     var seconduserNameData = db.get('accounts').find({username:req.params.secondUser}).value();
     var thirduserNameData = db.get('accounts').find({username:req.params.thirdUser}).value();
 
-    var u1Lat = firstuserNameData.userLat;
-    var u1Long = firstuserNameData.userLong;
-    var u2Lat = seconduserNameData.userLat;
-    var u2Long = seconduserNameData.userLong;
-    var u3Lat = thirduserNameData.userLat;
-    var u3Long = thirduserNameData.userLong;
-
-    avg_lat  = (Number(u1Lat) + Number(u2Lat) + Number(u3Lat))/3;
-    avg_long = (Number(u1Long)+Number(u2Long)+Number(u3Long))/3;
-    var avg_location = {avg_lat,avg_long};
-    res.send(avg_location);
+    var bulk_data = {firstuserNameData,seconduserNameData,thirduserNameData};
+    res.send(bulk_data);
 
 });
 
