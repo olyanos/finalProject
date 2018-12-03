@@ -103,8 +103,8 @@ function submituserNames() {
                 var pref_data = [u1p1,u1p2,u1p3,u1p4,u1p5,u2p1,u2p2,u2p3,u2p4,u2p5,u3p1,u3p2,u3p3,u3p4,u3p5]
                 var scores = [5.1,4.1,3.1,2.1,1.1,5.2,4.2,3.2,2.2,1.2,5.3,4.3,3.3,2.3,1.3];
 
-                var preffered = function(){
-
+                var preffered = test();
+                function test(){
                     var repeat = function(req) {
                         var counts = [];
                         for(var i = 0; i <= req.length; i++) {
@@ -120,6 +120,7 @@ function submituserNames() {
                         return false;
                     };
 
+
                     if(repeat(pref_data)){
                         var counted = [];
                         var scores = [];
@@ -133,7 +134,16 @@ function submituserNames() {
                             }
                         }
 
-                        return counted[scores.indexOf(Math.max.apply(null, scores))];
+
+                        var max         = Math.max.apply(null, scores);
+                        var max_index   = scores.indexOf(max);
+
+
+                        console.log("counted: " + counted);
+                        console.log("max: " + max);
+                        console.log("max_index: " + max_index);
+
+                        return counted[max_index];
 
                     }
 

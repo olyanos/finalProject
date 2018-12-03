@@ -1,0 +1,24 @@
+{
+  "accounts": [
+    {
+      "username": "",
+      "res1": "",
+      "res2": "",
+      "res3": "",
+      "res4": "",
+      "res5": "",
+      "userLat": "",
+      "userLong": ""
+    },
+    {
+      "username": "a",
+      "res1": "cafe nero",
+      "res2": "cafe nero",
+      "res3": "cafe nero",
+      "res4": "cafe nero",
+      "res5": "cafe nero",
+      "userLat": "42.357930",
+      "userLong": "-71.091793"
+    }
+  ]
+}
