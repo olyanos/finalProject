@@ -104,9 +104,9 @@ function submituserNames() {
 
                 var preffered = test();
                 function test(){
-                    for (i=1 ; i<=15 ; i++){
+                    for (i=0 ; i<15 ; i++){
                     
-                        for (j=i+1 ; j<=15 ;j++){
+                        for (j=i+1 ; j<15 ;j++){
 
                             if(pref_data[i] == pref_data[j]){
                                         scores[i] = scores[i] + scores[j];
