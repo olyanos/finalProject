@@ -1,4 +1,3 @@
-
 function calc_pref(){
 
 
@@ -105,55 +104,19 @@ function submituserNames() {
 
                 var preffered = test();
                 function test(){
-                    var repeat = function(req) {
-                        var counts = [];
-                        for(var i = 0; i <= req.length; i++) {
-                            if(counts[req[i]] == undefined) {
-                                counts[req[i]] = 1;
-                            }
+                    for (i=1 ; i<=15 ; i++){
+                    
+                        for (j=i+1 ; j<=15 ;j++){
 
-                            else {
-                                return true;
-                            }
-
-                        }
-                        return false;
-                    };
-
-
-                    if(repeat(pref_data)){
-                        var counted = [];
-                        var scores = [];
-                        for (var i = 0; i <= pref_data.length; i++) {
-                            if(counted[pref_data[i]] == undefined){
-                                counted[pref_data[i]] = scores[i]
-                            }
-
-                            else {
-                                counted[pref_data[i]] = counted[pref_data[i]] + scores[i];
-                            }
+                            if(pref_data[i] == pref_data[j]){
+                                        scores[i] = scores[i] + scores[j];
+                                        scores[j]=0;}
                         }
 
-
-                        var max         = Math.max.apply(null, scores);
-                        var max_index   = scores.indexOf(max);
-
-
-                        console.log("counted: " + counted);
-                        console.log("max: " + max);
-                        console.log("max_index: " + max_index);
-
-                        return counted[max_index];
-
                     }
-
-                    else{
-                        var top = [u1p1, u2p1, u3p1];
-                        var rand = top[Math.floor(Math.random() * myArray.length)];
-                        return rand;
-                    }
-
-
+                    console.log(scores.indexOf(Math.max(...scores)))
+                    var max_index = scores.indexOf(Math.max(...scores));
+                    return pref_data[max_index];
                 }
 
                 window.location.href = "../result.html?avg_lat="+avg_lat+"&avg_long="+avg_long+"&preffered="+preffered;
@@ -163,4 +126,3 @@ function submituserNames() {
 
 
 }
-
